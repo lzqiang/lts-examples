@@ -31,7 +31,7 @@ public class Main {
 
         // 启动节点
         jobTracker.start();
-
+        // jvm关闭的时候先执行该线程钩子
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             @Override
             public void run() {
